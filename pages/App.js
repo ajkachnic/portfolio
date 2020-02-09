@@ -61,7 +61,7 @@ export default function App() {
                             <Card title="Discord AutoBump" body="I used the Firefox developer tools to investigate Discord, and reverse engineer their API. After this discovery, I wrote a script to automatically send a message promoting my educational discord server. I learned how to use the browser developer tools to reverse engineer APIs and gained a further understanding of API integration"></Card>
                         </Col>
                         <Col size={gridSizing} m={{y:"3rem"}} p="2rem">
-                            <Card title="My Portfolio" body="My current portfolio. I designed it in Figma and built it with Next.js, React, and Atomize. I learned more on turning prototypes into a design and how to implement the Atomic Design Strategy" deployLink="https://ajkachnic.now.sh" codeLink="github.com/ajkachnic/portfolio"></Card>
+                            <Card title="My Portfolio" body="My current portfolio. I designed it in Figma and built it with Next.js, React, and Atomize. I learned more on turning prototypes into a design and how to implement the Atomic Design Strategy" deployLink="https://ajkachnic.now.sh" codeLink="https://github.com/ajkachnic/portfolio"></Card>
                         </Col>
                     </Row>
                 </Col>
