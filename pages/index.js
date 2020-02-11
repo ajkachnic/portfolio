@@ -11,8 +11,7 @@ const theme = {
         lg: "1156px",
         xl: "1656px"
     },
-    gutterWidth: "12px",
-    gutterHeight:"1rem"
+    gutterWidth: "12px"
   },
   fontFamily: {
     primary: "Inter",

@@ -8,10 +8,9 @@ export default function App() {
     const gridSizing =  {xs:12, md:6, l:4}
     return (
         <Container bg="info100">
-            <Row m="2rem">
-                <Col size={{xs:12, s:12, md:7,l:7}}>
+                <Col size={{xs:12, s:12, md:7,l:7}} m="2rem">
                     <Div>
-                    <Text tag="h1"  textSize="display3" m={{x:"0", y:"1rem"}}>Hey, I’m Andrew Kachnic 👋</Text>
+                    <Text tag="h1"  textSize="display3" m={{x:"0", y:"1rem"}}>Hey, I’m Andrew Kachnic &#x1F44B;</Text>
                     <Text tag="h2"  textSize="display2"m={{x:"0", y:"1rem"}}>Meet an energetic, enthusiastic, passionate web developer and designer
                     </Text>
                     <Text textSize="heading">
@@ -26,10 +25,7 @@ export default function App() {
                 <Col>
                     <Image src="https://unsplash.it/400/400" d={{ xs: "none", md: "flex" }}></Image>
                 </Col>
-
-            </Row>
-            <Row m="2rem">
-                <Col p="2rem">
+                <Col p="2rem" m="2rem">
                     <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="skills">My Skills</Text>
                     
                     <Row flexWrap="wrap"  p={{y:"2rem"}}>
@@ -48,9 +44,7 @@ export default function App() {
                         </Col>
                     </Row>
                 </Col>
-            </Row>
-            <Row m="2rem">
-                <Col p="2rem">
+                <Col p="2rem" m="2rem">
                     <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="projects">Projects</Text>
                     <Text tag="p" textSize="subheader">In addition to #100Days100Projects, I’ve also made many other projects that I’ve listed here. If you want to see the projects made for the challenge, check them out on my codepen</Text>
                     <Row flexWrap="wrap"  p={{y:"2rem"}}>
@@ -65,10 +59,8 @@ export default function App() {
                         </Col>
                     </Row>
                 </Col>
-            </Row>
 
-            <Row m="2rem">
-                <Row>
+                <Row m="2rem">
                 <Col size={{xs:12, s:12, md:7,l:7}}>
                 <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="projects">Contact</Text>
                 
@@ -76,21 +68,22 @@ export default function App() {
                     <Text tag="p" textSize="subheader">If you would like to contact me, you have a few options. You can message me on any of my social medias, join my discord server, or email me.</Text>
                 <br/>
                 <Div d="flex">
-                    <Anchor href="https://dribbble.com" target="_blank">
+                    <Anchor href="https://dribbble.com/ajkachnic" target="_blank">
                     <Icon name="Dribbble" size="48px" />
                     </Anchor>
 
-                    <Anchor href="https://dribbble.com" target="_blank">
+                    <Anchor href="https://twitter.com/su_andrewk" target="_blank">
                     <Icon name="Twitter" size="48px" />
                     </Anchor>
-                    <Anchor href="https://dribbble.com" target="_blank">
+                    <Anchor href="https://github.com/ajkachnic" target="_blank">
                     <Icon name="Github" size="48px" />
+                    </Anchor>
+                    <Anchor href="https://www.linkedin.com/in/andrew-kachnic-3b6691191/" target="_blank">
+                    <Icon name="Linkedin" size="48px" />
                     </Anchor>
                 </Div>
                 </Col>
                 </Row>
-
-            </Row>
         </Container>
     )
 }

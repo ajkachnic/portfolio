@@ -17,12 +17,9 @@ const Card = (props) => {
 			<Text textSize="title" m={{t:".5rem", b:"1rem"}}>
 				{props.body}
 			</Text>
-			<Col size="6">
 			{props.deployLink? <Anchor href={props.deployLink} target="_blank" textSize="subheader">Try it!</Anchor>:<></>}
-			</Col>
-			<Col size="6">
+			<br></br>
 			{props.codeLink? <Anchor href={props.codeLink} target="_blank" textSize="subheader">See The Code!</Anchor>:<></>}
-				</Col>
 		</Div>
 	)
 }
