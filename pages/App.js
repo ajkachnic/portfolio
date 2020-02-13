@@ -68,7 +68,7 @@ export default function App() {
                 <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="projects">Contact</Text>
                 
 
-                    <Text tag="p" textSize="subheader">If you would like to contact me, you have a few options. You can message me on any of my social medias, join my discord server, or email me.</Text>
+                    <Text tag="p" textSize="subheader">If you would like to contact me, you have a few options. You can message me on any of my social medias, <Anchor href="https://discord.gg/CTwgp3e">join my discord server</Anchor>, or <Anchor href="mailto:ajkachnic@protonmail.com">email me</Anchor>. I'm always open to new projects and ideas, so if you want to work with me, don't be afraid to reach out</Text>
                 <br/>
                 <Div d="flex">
                     <Anchor href="https://dribbble.com/ajkachnic" target="_blank">
