@@ -7,10 +7,11 @@ import {Div, Text, Col, Icon, Anchor} from 'atomize'
 
 const Card = (props) => {
 	return (
-		<Div bg="white" shadow="3" maxW="40rem" p={{x:"1rem", y:"1rem"}} rounded="md" m={{y:"1rem"}}>
-			<Col>
+		<Div bg={props.dark?props.darkTheme.altBg:props.lightTheme.altBg} shadow="3" maxW="40rem" p={{x:"1rem", y:"1rem"}} rounded="md" m={{y:"1rem"}}>
+			
+            <Col>
 			<Text textSize="heading" tag="h2" textWeight="700" m={{t:".5rem", b:"1rem"}}>
-				{props.title}
+                {props.title}
 			</Text>
 			</Col>
 

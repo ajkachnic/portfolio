@@ -15,14 +15,30 @@ const theme = {
   },
   fontFamily: {
     primary: "Inter",
+    secondary:"sans-serif"
+  },
+  colors: {
+      black900:"#101010"
   }
 };
 export default () => {
+    const darkTheme = {
+        mainBg:"dark",
+        altBg: "black900",
+        accent:"info600",
+        textColor:"white"
+    }
+    const lightTheme = {
+        mainBg:"info100",
+        altBg: "white",
+        accent:"info600",
+        textColor:'dark'
+    }
   return (
     <ThemeProvider theme={theme}>
 
       <StyleReset/>
-      <App/>
+      <App lightTheme={lightTheme} darkTheme={darkTheme}/>
     </ThemeProvider>
   )
 }
