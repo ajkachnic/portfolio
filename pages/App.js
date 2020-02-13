@@ -8,6 +8,8 @@ export default function App() {
     const gridSizing =  {xs:12, md:6, l:4}
     return (
         <Container bg="info100">
+                <Row>
+
                 <Col size={{xs:12, s:12, md:7,l:7}} m="2rem">
                     <Div>
                     <Text tag="h1"  textSize="display3" m={{x:"0", y:"1rem"}}>Hey, I’m Andrew Kachnic &#x1F44B;</Text>
@@ -22,9 +24,10 @@ export default function App() {
                     <Button text="Learn More" scroll="#skills"></Button>
                     </Div>
                 </Col>
-                <Col>
-                    <Image src="https://unsplash.it/400/400" d={{ xs: "none", md: "flex" }}></Image>
+                <Col d={{ xs: "none", md: "initial" }} size="5" >
+                    <Image src="https://unsplash.it/400/400" d={{ xs: "none", md: "initial" }} m="1rem" w="80%"></Image>
                 </Col>
+                </Row>
                 <Col p="2rem" m="2rem">
                     <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="skills">My Skills</Text>
                     
