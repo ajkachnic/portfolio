@@ -12,7 +12,7 @@ export default function App(props) {
     const gridSizing =  {xs:12, md:6, l:4}
     return (
         <Container bg={dark?darkTheme.mainBg:lightTheme.mainBg} textColor={dark?darkTheme.textColor:lightTheme.textColor}>
-                <Button bg={dark?darkTheme.altBg:lightTheme.Bg} w="72px" h="72px" pos="fixed" bottom="15px" right="15px" rounded="50%" onClick={() => {
+                <Button bg={dark?darkTheme.altBg:lightTheme.altBg} w="72px" h="72px" pos="fixed" bottom="15px" right="15px" rounded="50%" onClick={() => {
                     setDark(dark?false:true)
                 }}>
                     <Icon name="StarSolid" size="72px" color={dark?lightTheme.mainBg:darkTheme.mainBg}/>
