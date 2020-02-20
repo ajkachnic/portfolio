@@ -3,11 +3,22 @@ import { Text, Container, Row, Col, Div, Image, Icon, Anchor } from 'atomize'
 
 import Button  from '../components/Button'
 import Card from'../components/Card'
+import { setCookie, parseCookies} from 'nookies'
 
-export default function App() {
+const App = props => {
     const gridSizing =  {xs:12, md:6, l:4}
+
+
+
+    const toggle = () => {
+        setCookie(props.ctx, "isDark", props.current?false:true)
+        props.setTheme(props.current?false:true)
+    }
     return (
-        <Container bg="info100">
+        <Container bg="backgroundColor" textColor="foregroundColor">
+                <Div w="50px" h="50px"  onClick={toggle} cursor="pointer">
+                    <Icon name="StarSolid" color="altFgColor" size="50px" pos="fixed" bottom="50px" right="50px"/>
+                </Div>
                 <Row>
 
                 <Col size={{xs:12, s:12, md:7,l:7}} m="2rem">
@@ -18,6 +29,7 @@ export default function App() {
                     <Text textSize="heading">
                     I love working on projects and improving my skills. In fact, I’m currently working on #100Days100Projects, to work on rapid development and turning ideas into working sites.
                     <br/>
+                    {JSON.stringify(props.cookies)}
                     For over a year, I’ve been honing my skills and creating projects. I currently love minimalism and neomorphism for design and I have been working at incorporating them when I build websites. Other favorites of mine include my favorite font, Inter (used on this site); favorite framework, React, Vue, or Svelte (depends on project). I love web technology and feel free to reach out to me
                     </Text>
 
@@ -70,19 +82,19 @@ export default function App() {
 
                     <Text tag="p" textSize="subheader">If you would like to contact me, you have a few options. You can message me on any of my social medias, <Anchor href="https://discord.gg/CTwgp3e">join my discord server</Anchor>, or <Anchor href="mailto:ajkachnic@protonmail.com">email me</Anchor>. I'm always open to new projects and ideas, so if you want to work with me, don't be afraid to reach out</Text>
                 <br/>
-                <Div d="flex">
+                <Div d="flex" color="foregroundColor">
                     <Anchor href="https://dribbble.com/ajkachnic" target="_blank">
-                    <Icon name="Dribbble" size="48px" />
+                    <Icon name="Dribbble" size="48px"  color="foregroundColor"/>
                     </Anchor>
 
                     <Anchor href="https://twitter.com/su_andrewk" target="_blank">
-                    <Icon name="Twitter" size="48px" />
+                    <Icon name="Twitter" size="48px"  color="foregroundColor"/>
                     </Anchor>
                     <Anchor href="https://github.com/ajkachnic" target="_blank">
-                    <Icon name="Github" size="48px" />
+                    <Icon name="Github" size="48px"  color="foregroundColor"/>
                     </Anchor>
                     <Anchor href="https://www.linkedin.com/in/andrew-kachnic-3b6691191/" target="_blank">
-                    <Icon name="Linkedin" size="48px" />
+                    <Icon name="Linkedin" size="48px"  color="foregroundColor"/>
                     </Anchor>
                 </Div>
                 </Col>
@@ -90,3 +102,18 @@ export default function App() {
         </Container>
     )
 }
+App.getInitialProps = async ctx => {
+    const cookies = parseCookies(ctx);
+    
+    if(cookies.isDark) {
+        props.setTheme(true)
+    }
+    if(cookies.isDark == false) {
+        props.setTheme(false)
+    }
+    return {
+        cookies: cookies,
+        ctx:ctx
+    }
+}
+export default App
