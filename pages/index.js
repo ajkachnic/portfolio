@@ -10,9 +10,12 @@ const mainTheme = {
         sm: "720px",
         md: "960px",
         lg: "1156px",
-        xl: "1656px"
+        xl: "10000px"
     },
-    gutterWidth: "12px"
+    gutterWidth: {
+      xs:"2px",
+      md:"12px"
+    }
   },
   fontFamily: {
     primary: "Inter",
