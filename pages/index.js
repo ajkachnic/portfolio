@@ -1,8 +1,9 @@
 
 import { StyleReset, ThemeProvider } from 'atomize';
 import App from './App';
+import { useState } from 'react'
 
-const theme = {
+const mainTheme = {
   grid: {
     containerMaxWidth: {
         xs: "540px",
@@ -21,24 +22,35 @@ const theme = {
       black900:"#101010"
   }
 };
+
 export default () => {
-    const darkTheme = {
-        mainBg:"dark",
-        altBg: "black900",
-        accent:"info600",
-        textColor:"white"
-    }
+    const [isDark, setDark] = useState(true)
+
     const lightTheme = {
-        mainBg:"info100",
-        altBg: "white",
-        accent:"info600",
-        textColor:'dark'
+        ...mainTheme,
+        colors : {
+            highlight:"#0284FE",
+            backgroundColor:"#EEF7FF",
+            altBgColor:"#ffffff",
+            foregroundColor:"#000000",
+            altFgColor:"#151515"
+        }
+    }
+    const darkTheme = {
+        ...mainTheme,
+        colors : {
+            highlight:"#0284FE",
+            backgroundColor:"#02070e",
+            altBgColor:"#040c17",
+            foregroundColor:"#F8FBFF",
+            altFgColor:"#EEEEEE"
+        }
     }
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isDark?darkTheme:lightTheme}>
 
       <StyleReset/>
-      <App lightTheme={lightTheme} darkTheme={darkTheme}/>
+      <App setTheme={setDark} current={isDark}/>
     </ThemeProvider>
   )
 }
