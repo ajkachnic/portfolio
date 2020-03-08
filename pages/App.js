@@ -3,7 +3,6 @@ import { Text, Container, Row, Col, Div, Image, Icon, Anchor, Button } from 'ato
 
 import NewButton  from '../components/Button'
 import Card from'../components/Card'
-import { setCookie, parseCookies} from 'nookies'
 
 const App = props => {
     const gridSizing =  {xs:12, md:6, l:4}
@@ -11,7 +10,6 @@ const App = props => {
 
 
     const toggle = () => {
-        setCookie(props.ctx, "isDark", props.current?false:true)
         props.setTheme(props.current?false:true)
     }
     return (
@@ -101,18 +99,5 @@ const App = props => {
         </Container>
     )
 }
-App.getInitialProps = async ctx => {
-    const cookies = parseCookies(ctx);
-    
-    if(cookies.isDark) {
-        props.setTheme(true)
-    }
-    if(cookies.isDark == false) {
-        props.setTheme(false)
-    }
-    return {
-        cookies: cookies,
-        ctx:ctx
-    }
-}
+
 export default App
