@@ -4,6 +4,8 @@ import { Text, Container, Row, Col, Div, Image, Icon, Anchor, Button } from 'ato
 import NewButton  from '../components/Button'
 import Card from'../components/Card'
 
+import Head from 'next/head'
+
 const App = props => {
     const gridSizing =  {xs:12, md:6, l:4}
 
@@ -13,6 +15,11 @@ const App = props => {
         props.setTheme(props.current?false:true)
     }
     return (
+        <>
+        <Head>
+            <meta name="description" content="Hey, I’m Andrew Kachnic"></meta>
+            <title>Andrew Kachnic</title>
+        </Head>
         <Container bg="backgroundColor" textColor="foregroundColor">
                 <Div w="50px" h="50px"  onClick={toggle} cursor="pointer">
                     <Icon name="StarSolid" color="altFgColor" size="50px" pos="fixed" bottom="50px" right="50px"/>
@@ -96,6 +103,7 @@ const App = props => {
                 </Row>
                 
         </Container>
+        </>
     )
 }
 

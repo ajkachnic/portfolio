@@ -5,3 +5,9 @@ module.exports = {
     return config
   },
 }
+const sitemap = require('nextjs-sitemap-generator');  
+sitemap({  
+  baseUrl: 'andrewkachnic.now',  
+  pagesDirectory: __dirname + "/pages",  
+  targetDirectory : 'static/'  
+});
