@@ -19,13 +19,14 @@ const App = props => {
                 </Div>
                 <Row>
 
-                <Col size={{xs:12, s:12, md:7,l:7}} m="2rem">
+                <Col size="12" m="2rem">
                     <Div>
                     <Text tag="h1"  textSize="display3" m={{x:"0", y:"1rem"}}>Hey, I’m Andrew Kachnic &#x1F44B;</Text>
                     <Text tag="h2"  textSize="display2"m={{x:"0", y:"1rem"}}>Meet an energetic, enthusiastic, passionate web developer and designer
                     </Text>
                     <Text textSize="heading">
                     I love working on projects and improving my skills. In fact, I’m currently working on #100Days100Projects, to work on rapid development and turning ideas into working sites.
+                    <br/>
                     <br/>
                     {JSON.stringify(props.cookies)}
                     For over a year, I’ve been honing my skills and creating projects. I currently love minimalism and neomorphism for design and I have been working at incorporating them when I build websites. Other favorites of mine include my favorite font, Inter (used on this site); favorite framework, React, Vue, or Svelte (depends on project). I love web technology and feel free to reach out to me
@@ -34,9 +35,7 @@ const App = props => {
                     <NewButton text="Learn More" scroll="#skills"></NewButton>
                     </Div>
                 </Col>
-                <Col d={{ xs: "none", md: "initial" }} size="5" >
-                    <Image src="https://unsplash.it/400/400" d={{ xs: "none", md: "initial" }} m="1rem" w="80%"></Image>
-                </Col>
+
                 </Row>
                 <Col p="2rem" m="2rem">
                     <Text tag="h2"  textSize="display2" m={{x:"0", y:"1.5rem"}} id="skills">My Skills</Text>
