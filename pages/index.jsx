@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 
 import { ThemeProvider } from '../components/provider/ThemeContext';
 import App from './App';
-import merge from '../utils/merge';
-
-const mainTheme = {
-  colors: {
-    primary: '#2a65f9',
-  },
-};
 
 export default () => {
   const dark = {
@@ -16,16 +9,20 @@ export default () => {
       background: '#03060b',
       foreground: '#fff',
       cardBackground: '#070610',
+      primary: '#2a65f9',
     },
   };
   const light = {
-    background: '#fff',
-    foreground: '#03060b',
-    cardBackground: '#f5f5f5',
+    colors: {
+      background: '#fff',
+      foreground: '#03060b',
+      cardBackground: '#f5f5f5',
+      primary: '#2a65f9',
+    }
   };
   const [isDark, setDark] = useState(true);
   return (
-    <ThemeProvider value={isDark ? merge(mainTheme, dark) : merge(mainTheme, light)}>
+    <ThemeProvider theme={isDark ?  dark : light}>
       <App setDark={setDark} isDark={isDark} />
     </ThemeProvider>
   );

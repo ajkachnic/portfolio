@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
-import { ThemeContext } from '../components/provider/ThemeContext';
 import {
-  Container, Title, Body, Button, Heading, Card, Footer,
+  Container, Title, Body, Button, Heading, Card, Footer, ThemeContext,
 } from '../components';
 
 const App = () => {
+  const theme = useContext(ThemeContext);
   const skillsCards = [
     {
       title: 'Web Development',
@@ -26,7 +26,7 @@ const App = () => {
       body: 'Perhaps my best skill, I am able to quickly adapt to new technologies, programming languages and frameworks. I can rapidly get up to speed when prompted with something to learn and survive in a new climate',
     },
   ];
-  const theme = useContext(ThemeContext);
+
 
   return (
     <div className="main">
@@ -127,8 +127,8 @@ const App = () => {
         <section id="skills">
           <Heading>My Skills</Heading>
           <div className="card__grid">
-            { skillsCards.map(({ title, body }) => (
-              <Card title={title} body={body} />
+            { skillsCards.map(({ title, body }, index) => (
+              <Card title={title} body={body} key={index} />
             )) }
           </div>
         </section>
