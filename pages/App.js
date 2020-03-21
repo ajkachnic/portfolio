@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-
+import React from 'react';
 import IndexLayout from '../layouts/indexLayout';
 
 const App = () => {
@@ -24,6 +23,7 @@ const App = () => {
 
 
   return (
+    <>
     <IndexLayout
       data={{
         intro: {
@@ -46,6 +46,7 @@ const App = () => {
         
       }}
     />
+    </>
   );
 };
 

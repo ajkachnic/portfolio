@@ -6,31 +6,31 @@ const Title = ({ children }) => {
 
   return (
     <>
-      <style jsx>
+      <style jsx global>
         {`
-        h1.title {
+        .title {
           color: ${theme.colors.foreground};
           font-size: 5rem;
           font-weight:900;
-          margin: 2rem 0;
+          margin:  2rem;
         }
 
         @media (max-width: 1200px) {
-          h1.title {
+          .title {
             font-size: 4rem;
 
           margin: 1.5rem 0;
           }
         }
         @media (max-width: 800px) {
-          h1.title {
+          .title {
             font-size: 3rem;
 
           margin: 1rem 0;
           }
         }
         @media (max-width: 600px) {
-          h1.title {
+          .title {
             font-size: 2.75rem;
           }
         }
