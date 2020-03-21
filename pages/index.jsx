@@ -25,7 +25,7 @@ export default () => {
   };
   const [isDark, setDark] = useState(true);
   return (
-    <ThemeProvider theme={isDark ? merge(mainTheme, dark) : merge(mainTheme, light)}>
+    <ThemeProvider value={isDark ? merge(mainTheme, dark) : merge(mainTheme, light)}>
       <App setDark={setDark} isDark={isDark} />
     </ThemeProvider>
   );

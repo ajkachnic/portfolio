@@ -26,8 +26,7 @@ const App = () => {
       body: 'Perhaps my best skill, I am able to quickly adapt to new technologies, programming languages and frameworks. I can rapidly get up to speed when prompted with something to learn and survive in a new climate',
     },
   ];
-  const { colors } = useContext(ThemeContext);
-  const { background, foreground } = colors;
+  const theme = useContext(ThemeContext);
 
   return (
     <div className="main">
@@ -43,8 +42,8 @@ const App = () => {
           :root {
             height: 100%;
             width: 100%;
-            background: ${background};
-            color: ${foreground};
+            background: ${theme.colors.background};
+            color: ${theme.colors.foreground};
           }
           @font-face {
             font-family: Avenir;
