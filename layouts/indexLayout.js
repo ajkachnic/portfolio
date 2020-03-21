@@ -90,7 +90,7 @@ const IndexLayout = ({ data }) => {
           </div>
         </section>
 
-        <Footer body={data.footerBody} />
+        <Footer body={data.footer.body} />
       </Container>
     </div>
   );
