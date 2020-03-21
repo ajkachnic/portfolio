@@ -12,7 +12,7 @@ const Title = ({ children }) => {
           color: ${theme.colors.foreground};
           font-size: 5rem;
           font-weight:900;
-          margin:  2rem;
+          margin:  2rem 0;
         }
 
         @media (max-width: 1200px) {
