@@ -21,7 +21,7 @@ export default class MyApp extends App {
             url: 'https://andrewkachnic.now.sh',
             site_name: 'Andrew Kachnic',
             locale: 'en_US',
-            title: 'I\' Andrew Kachnic',
+            title: 'I\'m Andrew Kachnic',
             description: 'Meet a passionate, energetic web developer.',
           }}
           twitter={{
