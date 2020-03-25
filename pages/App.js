@@ -2,7 +2,7 @@ import React from 'react';
 import IndexLayout from '../layouts/indexLayout';
 
 const App = () => {
-  const skillsCards = [
+  const skills = [
     {
       title: 'Web Development',
       body: 'The main focus of my learning has been on web development. As a result, I am proficient with JavaScript, HTML, CSS, along with other technologies. I spend a lot of time working on web-based projects',
@@ -21,6 +21,20 @@ const App = () => {
     },
   ];
 
+  const projects = [
+    {
+      title: 'GetTabsApp',
+      body: 'A side project I\' working on in my spare time. It will be an open source bookmark extensions. I am building it with Next.js, MongoDB, and making it completely serverless',
+    },
+    {
+      title: 'KennyK BBQ Site',
+      body: 'A website I built for my father\'s catering business. The site offers much more customization with that of a website builder. I wrote it using Next.js and NetlifyCMS.'
+    },
+    {
+      title: 'Discord Leaderboard',
+      body: 'I created a discord bot for my server. I also wrote a backend using Express and MongoDB for storage. It turned out pretty well'
+    }
+  ]
 
   return (
     <>
@@ -38,11 +52,15 @@ const App = () => {
         },
         skills: {
           title: 'My Skills',
-          skills: skillsCards
+          skills
         },
         footer: {
           body: 'This site is currently a work in progress. I am actively developing it',
-        } 
+        },
+        projects: {
+          title: 'Projects',
+          projects
+        }
         
       }}
     />

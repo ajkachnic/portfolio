@@ -11,6 +11,7 @@ import {
   Footer,
   ThemeContext
 } from "../components";
+import Head from "next/head";
 
 
 const IndexLayout = ({ data }) => {
@@ -89,7 +90,14 @@ const IndexLayout = ({ data }) => {
             ))}
           </div>
         </section>
-
+        <section id="projects">
+          <Heading>{data.projects.title}</Heading>
+          <div className="card__grid">
+            {data.projects.projects.map(({ title, body, link }, index) => (
+              <Card title={title} body={body} key={index} />
+            ))}
+          </div>
+        </section>
         <Footer body={data.footer.body} />
       </Container>
     </div>
