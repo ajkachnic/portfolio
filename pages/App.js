@@ -60,6 +60,13 @@ const App = () => {
         projects: {
           title: 'Projects',
           projects
+        },
+        contact: {
+          title: 'Contact me',
+          body: `If you would like to contact me, you can reach on any of me social media, or on my discord server (all linked below). You can also email me at ajkachnic@protonmail.com
+          
+          I'm always open to new projects and ideas, so if you want to work with me, don't be afraid to reach out
+          `
         }
         
       }}

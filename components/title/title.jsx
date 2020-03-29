@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../provider/ThemeContext';
 
-const Title = ({ children }) => {
+const Title = ({ children,style }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -36,7 +36,7 @@ const Title = ({ children }) => {
         }
       `}
       </style>
-      <h1 className="title">{children}</h1>
+      <h1 className="title" style={style}>{children}</h1>
     </>
   );
 };

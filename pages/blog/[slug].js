@@ -3,8 +3,9 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Head from 'next/head';
 import { NextSeo } from 'next-seo'
-
+import Link from 'next/link';
 import '../../utils/blogStyle.css'
+import { Title } from "../../components";
 
 export default function PostTemplate({ content, data, slug }) {
   const frontmatter = data;
@@ -34,7 +35,23 @@ export default function PostTemplate({ content, data, slug }) {
         <title>{frontmatter.title}</title>
       </Head>
       <div>
-        <h1>{frontmatter.title}</h1>
+      <nav>
+          <ul className="nav">
+            <li className="nav__item">
+              <Link href="/">
+                  <a>Home</a>
+               </Link>
+            </li>
+            <li className="nav__item">
+              <Link href="/blog">
+                <a href="/blog" target="_parent">Blog</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <Title style={{
+          padding: "7rem 0 1rem 0"
+        }}>{frontmatter.title}</Title>
 
         <ReactMarkdown source={content} />
       </div>

@@ -51,6 +51,7 @@ p, blockquote, a, li {
 }
 h1 {
   font-size: 3rem;
+  margin: 3rem 0 1rem 0;
 }
 h1.title {
   font-size: 4rem;
@@ -74,4 +75,26 @@ blockquote {
  padding: 0.125em .5em;
  margin: .5em 0;
  border-left: 2px solid white;
+}
+li.nav__item a {
+  color: #fff;
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background: #03060b;
+  top: 0;
+  padding: 1.5rem 0;
+  left: 0;
+}
+nav ul.nav {
+  list-style: none;
+  display: flex; 
+  justify-content: space-around;
+  width: 100%;
+}
+.nav__item {
+  font-weight:700;
+  font-size: 1.25em;
 }

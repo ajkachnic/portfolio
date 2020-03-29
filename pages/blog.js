@@ -31,13 +31,33 @@ export default function Blog() {
         }}
         description="A collection of blog posts -- by Andrew Kachnic"
         title="My Blog"
-      />
-      <Title>My Blog</Title>
+      />        
+      <nav>
+      <ul className="nav">
+        <li className="nav__item">
+          <Link href="/">
+              <a>Home</a>
+           </Link>
+        </li>
+        <li className="nav__item">
+          <Link href="/blog">
+            <a href="/blog" target="_parent">Blog</a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+      <Title style={{
+        padding:"5rem 0 0 0"
+      }}>My Blog</Title>
       <div className="grid">
-        {posts.map(val => (
-          <div>
+        {posts.map((val, i) => (
+          <div key={i}>
             <Subtitle>
-              <Link href={val.link}>{val.title}</Link>
+              <Link href={val.link}>
+                <a>
+                {val.title}  
+                </a>
+              </Link>
             </Subtitle>
             <p
               style={{
@@ -49,8 +69,8 @@ export default function Blog() {
               {val.date}
             </p>
             <div className="tags">
-              {val.tags.map(val => (
-                <p className="tag">{val}</p>
+              {val.tags.map((val, i) => (
+                <p className="tag" key={i}>{val}</p>
               ))}
             </div>
           </div>
