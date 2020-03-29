@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: Avenir;
+  scroll-behavior: smooth;
+  white-space: pre-line;
+  background: #03060b;
+}
+:root {
+  height: 100%;
+  width: 100%;
+  background: #03060b;
+  color: #ffffff;
+  padding:1em 3em;
+  font-size: 1.1rem;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/fonts/Avenir-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/fonts/Avenir-Book.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/fonts/Avenir-Heavy.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/fonts/Avenir-Black.ttf);
+  font-weight: 900;
+}
+p, a, h2, h3, h4, h5, h6, blockquote, li {
+  opacity: .75;
+  transition: opacity .4s;
+}
+p:hover, a:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, blockquote:hover, li:hover  {
+  opacity: 1;
+}
+
+a {
+  color:#2a65f9;
+  font-weight: 700;
+  text-decoration: none;
+}
+p, blockquote, a, li {
+  margin: .25em 0;
+}
+h1 {
+  font-size: 3rem;
+}
+h1.title {
+  font-size: 4rem;
+}
+
+.tags {
+  display: flex;
+  font-size: .8em;
+  gap: 1rem;
+  width: 60%;
+}
+p.tag {
+  font-weight: 700;
+  cursor: pointer;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+blockquote {
+ padding: 0.125em .5em;
+ margin: .5em 0;
+ border-left: 2px solid white;
+}
