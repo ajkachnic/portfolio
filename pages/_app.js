@@ -2,8 +2,17 @@ import React from 'react';
 import App from 'next/app';
 import { NextSeo } from 'next-seo'
 import Head from 'next/head';
-
+import ReactGA from 'react-ga';
 export default class MyApp extends App {
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      ReactGA.initialize('UA-158973361-1')
+      window.GA_INITIALIZED = true
+    }
+
+    ReactGA.set({ page: window.location.pathname })
+    ReactGA.pageview(window.location.pathname)
+  }
   render() {
     const { Component, pageProps } = this.props;
     return (
