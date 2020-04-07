@@ -98,3 +98,7 @@ nav ul.nav {
   font-weight:700;
   font-size: 1.25em;
 }
+code {
+  font-family: monospace;
+  color: #b5c0db;
+}

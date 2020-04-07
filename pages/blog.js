@@ -8,17 +8,25 @@ import { NextSeo } from "next-seo";
 export default function Blog() {
   let posts = [
     {
+      title: "My Results with 100 Days 100 Projects",
+      date: "2020-04-07",
+      description:
+        "The final chapter in the story that is my run of 100 Days 100 Projects",
+      tags: ["challenge", "webdev"],
+      link: "/blog/results-of-100days100projects",
+    },
+    {
       title: "My Take on Atomic Design in React",
       date: "2020-03-28",
       tags: ["javascript", "design", "react"],
-      link: "/blog/my-take-on-atomic-design-in-react"
+      link: "/blog/my-take-on-atomic-design-in-react",
     },
     {
       title: "User Authentication, In 2020",
       date: "2020-03-25",
       tags: ["security", "privacy"],
-      link: "/blog/user-authentication-in-2020"
-    }
+      link: "/blog/user-authentication-in-2020",
+    },
   ];
   return (
     <>
