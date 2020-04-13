@@ -23,8 +23,8 @@ const App = () => {
 
   const projects = [
     {
-      title: 'GetTabsApp',
-      body: 'A side project I\' working on in my spare time. It will be an open source bookmark extensions. I am building it with Next.js, MongoDB, and making it completely serverless',
+      title:'Interium',
+      body:'A NoSQL Database I\'m building with Golang. I am planning on making packages for a bunch of programming languages. Currently it uses HTTP',
     },
     {
       title: 'KennyK BBQ Site',
