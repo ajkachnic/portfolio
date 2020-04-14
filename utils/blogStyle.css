@@ -10,8 +10,14 @@
   width: 100%;
   background: #03060b;
   color: #ffffff;
-  padding:1em 3em;
+  padding:1em;
   font-size: 1.1rem;
+  max-width: 1200px;
+  display:grid;
+}
+body {
+  display:grid;
+
 }
 @font-face {
   font-family: Avenir;
@@ -50,11 +56,14 @@ p, blockquote, a, li {
   margin: .25em 0;
 }
 h1 {
-  font-size: 3rem;
-  margin: 3rem 0 1rem 0;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+}
+h2 {
+  font-size: 1.5rem;
 }
 h1.title {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .tags {
@@ -87,6 +96,7 @@ nav {
   top: 0;
   padding: 1.5rem 0;
   left: 0;
+  z-index: 2;
 }
 nav ul.nav {
   list-style: none;
@@ -101,4 +111,27 @@ nav ul.nav {
 code {
   font-family: monospace;
   color: #b5c0db;
+}
+
+@media(min-width: 600px) {
+  :root {
+    padding:1em 3em;
+    /* margin: 3rem 0 1rem 0; */
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h1.title {
+    font-size: 3rem;
+  }
+}
+
+.main {
+  margin:auto;
 }

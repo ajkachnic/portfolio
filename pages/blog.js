@@ -29,7 +29,7 @@ export default function Blog() {
     },
   ];
   return (
-    <>
+    <div className="main">
       <NextSeo
         openGraph={{
           title: "My Blog",
@@ -77,13 +77,13 @@ export default function Blog() {
               {val.date}
             </p>
             <div className="tags">
-              {val.tags.map((val, i) => (
-                <p className="tag" key={i}>{val}</p>
+              {val.tags.map((tag, i) => (
+                <p className="tag" key={i}>{tag}</p>
               ))}
             </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
