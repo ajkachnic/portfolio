@@ -20,6 +20,7 @@ export default class MyApp extends App {
       <Head>
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <meta name="google-site-verification" content="ADwbJ0_drDOhXOATi3qNUeux5xJJVXYGqnSccoZPdDg" />
         <NextSeo
           title="I'm Andrew Kachnic"
           description="Meet a passionate, energetic web developer."

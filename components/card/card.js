@@ -8,6 +8,9 @@ const Card = ({ body, title, link, linkText }) => {
     <>
       <style jsx>
         {`
+          * {
+            color: ${theme.colors.foreground};
+          }
           div.card {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
             padding: 2rem;
@@ -39,6 +42,7 @@ const Card = ({ body, title, link, linkText }) => {
         ) : (
           ""
         )}
+        {link}
       </div>
     </>
   );
